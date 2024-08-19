@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-5">Seu agente inteligente</h1>
+    <p class="lead">Faça uma pergunta para o seu agente inteligente sobre suas vendas e tenha respostas relevantes</p>
+    <form method="post">
+        {%csrf_token %}
+        {% for field in form %}
+            <div class="mb-3">
+                <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                {{ field }}
+            </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+    <div class="mt-5">
+        <h2>Resultado</h2>
+        <textarea class="form-control" name="" id="" readonly style="width: 100%; height: 200px;">{{ result }}</textarea>
+    </div>
+</div>
+{% endblock %}
