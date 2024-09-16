@@ -1,2 +1,17 @@
-OPENAI_API_KEY=token
+OPENAI_API_KEY=key
 OPENAI_MODEL_NAME=modelo
+
+SECRET_KEY=chave
+DEBUG = 0
+ALLOWED_HOSTS=lista
+# SQLITE
+export DATABASE_ENGINE='django.db.backends.sqlite3'
+export DATABASE_NAME='db.sqlite3'
+# POSTGRES
+# DATABASE_ENGINE='django.db.backends.postgresql'
+# DATABASE_NAME='postgres'
+# DATABASE_USER='postgres'
+# DATABASE_PASSWORD='postgres'
+# DATABASE_HOST='db'
+# DATABASE_PORT='5432'
+

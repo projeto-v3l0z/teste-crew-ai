@@ -9,7 +9,7 @@ from crew.models import Vendas
 class IndexView(FormView):
     template_name = 'index.html'
     form_class = PerguntaForm
-
+    
     def form_valid(self, form):
         pergunta = form.cleaned_data['pergunta']
 
